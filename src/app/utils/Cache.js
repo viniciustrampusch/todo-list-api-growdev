@@ -9,8 +9,6 @@ Promise.promisifyAll(redis);
 
 class Cache {
   constructor() {
-    console.log('========= // ===========');
-    console.log(process.env.REDIS_URL);
     this.client = redis.createClient(process.env.REDIS_URL, {
       tls: {
         rejectUnauthorized: false,
