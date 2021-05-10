@@ -35,6 +35,7 @@
   },
   "scripts": {
     "dev": "nodemon ./src/server.js --ignore ./__tests__",
+    "prebuild": "yarn swagger",
     "build": "sucrase ./src -d ./dist --transforms imports",
     "start": "node -r dotenv/config ./dist/server.js",
     "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
